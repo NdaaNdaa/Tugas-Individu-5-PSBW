@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Website Member{% endblock %}</title>
+</head>
+
+    <!-- Konten Navbar -->
+    <nav> 
+        <h2>Website Username Member</h2>
+
+        <a href="{{url_for('beranda') }}">Beranda</a>
+        <a href="{{url_for('tentang') }}">Tentang</a>
+        <a href="{{url_for('produk') }}">Produk</a>
+        <a href="{{url_for('kontak') }}">Kontak</a>
+        <a href="{{url_for('daftar_member') }}">Daftar Member</a>
+
+    </nav>
+
+    <hr>
+
+    <!-- Konten Halaman -->
+    <main>
+        {% block content %}
+        {% endblock%}
+    </main>
+
+    <!-- Konten Footer  -->
+    <footer>
+        <p>&copy; 2026 Website Username Member.</p>
+        <p>Dibuat dengan menggunakan Flask dan Jinja2</p>
+    </footer>
+
+<body>
+    
+</body>
+</html>

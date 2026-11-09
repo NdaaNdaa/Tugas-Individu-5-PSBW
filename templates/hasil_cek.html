@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2>Hasil Pengecekan Username</h2>
+
+    <p>Username yang Diperiksa : {{username}}</p>
+
+    {% if status == "tidak_valid" %}
+
+        <p>Username Tidak Valid !</p>
+
+    {% elif status == "sudah_dipakai" %}
+
+        <p>Username Sudah Digunakan Loh ya</p>
+
+    {% else %}
+
+        <p>Username Tersedia !</p>
+
+    {% endif %}
+
+{% endblock %}

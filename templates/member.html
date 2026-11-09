@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2>Daftar Member</h2>
+
+    <p>Berikut adalah Daftar Member yang Terdaftar :</p>
+
+    <ul>
+        {% for id, username in data_member.items() %}
+
+            <li>
+                ID Member : {{ id }} |
+                Username : {{ username|upper    }}
+            </li>
+
+        {% endfor %}
+    </ul>
+    
+{% endblock %}
